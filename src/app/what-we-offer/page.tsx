@@ -8,7 +8,7 @@ export default function WhatWeOffer() {
             alignItems={"center"}
             spacing={16}
         >
-            <Stack width="99dvw" spacing={0}>
+            <Stack width="100%" spacing={0}>
                 <Box
                     position="absolute"
                     height="225px"

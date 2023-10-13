@@ -21,7 +21,15 @@ export default function Home() {
             py={8}
             spacing={16}
         >
-            <Box maxWidth="880px" display="flex">
+            <Box
+                maxWidth="880px"
+                display="flex"
+                flexDirection={{
+                    base: "column",
+                    md: "row",
+                }}
+                p={{ base: 4, md: 8 }}
+            >
                 <VideoPlayer videoUrl="./landing.mp4" />
 
                 <Box
@@ -31,7 +39,6 @@ export default function Home() {
                     backgroundImage={"./landingside.jpg"}
                     backgroundPosition={"35%"}
                     backgroundSize={"cover"}
-                    width="600px"
                     p={4}
                     textAlign={"center"}
                 >
@@ -50,6 +57,10 @@ export default function Home() {
                 alignItems={"center"}
                 justifyContent={"center"}
                 spacing={8}
+                p={{
+                    base: 4,
+                    md: 8,
+                }}
             >
                 <Text
                     fontSize="2xl"
@@ -80,29 +91,36 @@ export default function Home() {
                 </Button>
             </Stack>
             <Box>
-                <HStack alignItems={"center"} spacing={16}>
+                <Stack
+                    flexDir={{
+                        base: "column",
+                        md: "row",
+                    }}
+                    alignItems={"center"}
+                    spacing={16}
+                >
                     <Image
-                        width="300px"
-                        height="200px"
+                        width="200px"
+                        height="150px"
                         objectFit={"contain"}
                         src={"./venues/Capital.png"}
                         alt="capital-one"
                     />
                     <Image
-                        width="200px"
-                        height="200px"
+                        width="150px"
+                        height="150px"
                         objectFit={"contain"}
                         src={"./venues/Kennedy.png"}
                         alt="kennedy-center"
                     />
                     <Image
-                        width="300px"
-                        height="150px"
+                        width="200px"
+                        height="100px"
                         objectFit={"contain"}
                         src={"./venues/Wolftrap.png"}
                         alt="wolftrap"
                     />
-                </HStack>
+                </Stack>
                 <Text color="brand.bodyFont" textAlign="right" mt={-4}>
                     Proudly performing on DC’s stages for 14 years
                 </Text>

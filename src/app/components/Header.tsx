@@ -1,8 +1,20 @@
 "use client";
 import { pages } from "../optionSets";
-import { Box, Container, HStack, Text, Image, Button } from "@chakra-ui/react";
+import {
+    Box,
+    Container,
+    HStack,
+    Text,
+    Image,
+    Button,
+    Popover,
+    PopoverTrigger,
+    PopoverContent,
+    PopoverBody,
+    IconButton,
+} from "@chakra-ui/react";
 import { usePathname, useRouter } from "next/navigation";
-
+import { HiMenuAlt2 } from "react-icons/hi";
 function Header() {
     const pathname = usePathname();
     const router = useRouter();
@@ -20,7 +32,10 @@ function Header() {
             height="85px"
         >
             <Container maxW={"1580px"}>
-                <HStack justify="space-between" alignItems={"end"}>
+                <HStack
+                    justify="space-between"
+                    alignItems={{ base: "center", md: "end" }}
+                >
                     <Image
                         width="200px"
                         my={-3}
@@ -35,9 +50,10 @@ function Header() {
                         }}
                         cursor={"pointer"}
                     />
-
-                    <HStack spacing={{ base: "2", md: "4" }}>
-                        {/* map through each page and display a nav button, don't link home */}
+                    <HStack
+                        spacing={{ base: 0.5, md: 1 }}
+                        display={{ base: "none", md: "flex" }}
+                    >
                         {Object.values(pages)
                             .filter((page) => page.url !== "/")
                             .map((page) => (
@@ -63,6 +79,55 @@ function Header() {
                                 </Box>
                             ))}
                     </HStack>
+                    <Popover>
+                        <PopoverTrigger>
+                            <IconButton
+                                display={{ base: "flex", md: "none" }}
+                                border="solid white 2px"
+                                aria-label="Search database"
+                                // get menu button from react icons
+                                icon={<HiMenuAlt2 />}
+                                variant="brandGhost"
+                            />
+                        </PopoverTrigger>
+                        <PopoverContent
+                            maxWidth="200px"
+                            mt={3.5}
+                            mr={2}
+                            display={{ md: "none" }}
+                            borderTopRadius={0}
+                            textAlign={"center"}
+                            boxShadow={"md"}
+                            backgroundColor="brand.background"
+                        >
+                            <PopoverBody>
+                                {Object.values(pages)
+                                    .filter((page) => page.url !== "/")
+                                    .map((page) => (
+                                        <Box key={page.url}>
+                                            <Button variant="brandGhost">
+                                                <Text
+                                                    onClick={() => {
+                                                        router.push(page.url);
+                                                    }}
+                                                    key={page.url}
+                                                    aria-label={page.title}
+                                                    cursor={"pointer"}
+                                                    fontWeight={400}
+                                                    color={
+                                                        pathname === page.url
+                                                            ? "brand.headerFontSelected"
+                                                            : "brand.headerFont"
+                                                    }
+                                                >
+                                                    {page.title}
+                                                </Text>
+                                            </Button>
+                                        </Box>
+                                    ))}
+                            </PopoverBody>
+                        </PopoverContent>
+                    </Popover>
                 </HStack>
             </Container>
         </Box>

@@ -121,7 +121,15 @@ export default function Home() {
                         alt="wolftrap"
                     />
                 </Stack>
-                <Text color="brand.bodyFont" textAlign="right" mt={-4}>
+                <Text
+                    color="brand.bodyFont"
+                    textAlign="right"
+                    mt={-4}
+                    p={{
+                        base: 4,
+                        md: 8,
+                    }}
+                >
                     Proudly performing on DC’s stages for 14 years
                 </Text>
             </Box>

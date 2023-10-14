@@ -205,6 +205,7 @@ export default function WhatWeOffer() {
                             width={{
                                 md: "calc(100% - 400px)",
                             }}
+                            objectPosition={"bottom"}
                             objectFit={"cover"}
                             src={"./off-7.jpeg"}
                             alt="wwe-3"

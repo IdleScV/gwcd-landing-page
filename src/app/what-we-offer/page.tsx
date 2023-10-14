@@ -255,7 +255,7 @@ export default function WhatWeOffer() {
                                 md: "calc(100% - 400px)",
                             }}
                             objectFit={"cover"}
-                            src={"./handfolk.jpg"}
+                            src={"./hanfolk.jpg"}
                             alt="wwe-3"
                             mx={{ base: 8, md: 0 }}
                             my={{ base: 8, md: 0 }}

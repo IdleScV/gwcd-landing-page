@@ -7,7 +7,7 @@ import {
     Image,
 } from "@chakra-ui/react";
 
-const ArticleLink = ({ imageUrl, altText, heading, text, date, linkUrl }) => {
+const ArticleLink = ({ imageUrl, heading, text, date, linkUrl }) => {
     return (
         <LinkBox>
             <Box shadow="md" bg="gray.900" color="white" borderRadius={"md"}>

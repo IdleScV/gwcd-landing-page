@@ -10,6 +10,7 @@ import {
     Textarea,
     VStack,
     Text,
+    useToast,
 } from "@chakra-ui/react";
 import { useState } from "react";
 
@@ -22,6 +23,7 @@ interface FormData {
 }
 
 export default function ContactForm() {
+    const toast = useToast(); // Initialize toast for showing popup
     const [formData, setFormData] = useState<FormData>({
         name: "",
         organization: "",
@@ -29,6 +31,7 @@ export default function ContactForm() {
         performanceDate: "",
         message: "",
     });
+    const [isLoading, setIsLoading] = useState(false); // New state variable for loading status
 
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -41,21 +44,41 @@ export default function ContactForm() {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log("hitting here", formData);
+        setIsLoading(true); // Set loading to true at the start of submission
 
         try {
             const response = await fetch("/api/contact", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
+                /* ... */
             });
+
+            if (!response.ok)
+                throw new Error(
+                    "Network response was not ok " + response.statusText
+                );
 
             const data = await response.json();
             console.log(data);
+
+            toast({
+                // Show success popup
+                title: "Success",
+                description: "Your message has been sent!",
+                status: "success",
+                duration: 5000,
+                isClosable: true,
+            });
         } catch (error) {
             console.error("Error submitting form:", error);
+            toast({
+                // Optionally, show error popup
+                title: "Error",
+                description: "There was an error sending your message.",
+                status: "error",
+                duration: 5000,
+                isClosable: true,
+            });
+        } finally {
+            setIsLoading(false); // Set loading to false after submission
         }
     };
 
@@ -81,7 +104,7 @@ export default function ContactForm() {
                 as="form"
                 onSubmit={handleSubmit}
             >
-                <FormControl id="name" marginBottom="4">
+                <FormControl id="name" marginBottom="4" isDisabled={isLoading}>
                     <FormLabel>Name</FormLabel>
                     <Input
                         type="text"
@@ -92,7 +115,11 @@ export default function ContactForm() {
                     />
                 </FormControl>
 
-                <FormControl id="organization" marginBottom="4">
+                <FormControl
+                    id="organization"
+                    marginBottom="4"
+                    isDisabled={isLoading}
+                >
                     <FormLabel>Organization</FormLabel>
                     <Input
                         type="text"
@@ -103,7 +130,11 @@ export default function ContactForm() {
                     />
                 </FormControl>
 
-                <FormControl as="fieldset" marginBottom="4">
+                <FormControl
+                    as="fieldset"
+                    marginBottom="4"
+                    isDisabled={isLoading}
+                >
                     <FormLabel as="legend">Requesting Performance?</FormLabel>
                     <VStack>
                         <RadioGroup
@@ -152,7 +183,12 @@ export default function ContactForm() {
                     />
                 </FormControl>
 
-                <Button width="full" colorScheme="purple" type="submit">
+                <Button
+                    width="full"
+                    colorScheme="purple"
+                    type="submit"
+                    isLoading={isLoading} // Show loading state on button
+                >
                     Submit
                 </Button>
             </Box>

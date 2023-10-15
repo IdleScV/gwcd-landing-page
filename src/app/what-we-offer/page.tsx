@@ -94,16 +94,18 @@ const Section = ({
 
             <Box
                 width={{ base: "100%", md: "400px" }}
-                p={{ base: 8, md: 12 }}
+                p={{ base: 4, md: 12 }}
                 color="brand.bodyFont"
                 fontWeight={500}
                 textShadow="1px 1px 1px black"
                 textAlign={{ base: "left", md: imageOnLeft ? "right" : "left" }}
             >
-                <Text fontSize="3xl" mb={4}>
+                <Text fontSize={{ base: "xl", sm: "4xl", lg: "4xl" }} mb={4}>
                     {header}
                 </Text>
-                <Text>{content}</Text>
+                <Text fontSize={{ sm: "lg", base: "sm", lg: "xl" }}>
+                    {content}
+                </Text>
             </Box>
         </Box>
     </section>

@@ -1,0 +1,23 @@
+[
+    {
+        "imageUrl": "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/Smithsonian+Cover.jpg",
+        "heading": "Smithsonian",
+        "text": "GWCD proudly partners with Smithsonian's Museum of Asian Art",
+        "date": "October 24, 2022",
+        "linkUrl": "https://www.youtube.com/watch?v=gqPN6YG2OK0"
+    },
+    {
+        "imageUrl": "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/Atlas+Obscura+Cover.png",
+        "heading": "Atlas Obscura",
+        "text": "Exploring Chinese Folk Dance During Quarantine",
+        "date": "May 15, 2020",
+        "linkUrl": "https://www.atlasobscura.com/videos/chinese-folk-dance-quarantine"
+    },
+    {
+        "imageUrl": "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/Channel+4+Cover.png",
+        "heading": "NBC Washington",
+        "text": "Common Language for All People: Meet Xuejuan Dance",
+        "date": "May 19, 2019",
+        "linkUrl": "https://www.nbcwashington.com/news/local/common-language-for-all-people-meet-xuejuan-dance_washington-dc/137965/?amp=1"
+    }
+]

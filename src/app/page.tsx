@@ -1,3 +1,4 @@
+"use client";
 import {
     Box,
     Button,
@@ -10,8 +11,10 @@ import {
 } from "@chakra-ui/react";
 
 import { VideoPlayer } from "./components/VideoPlayer";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+    const router = useRouter();
     return (
         <HStack
             backgroundColor="brand.pageBackground"
@@ -86,7 +89,12 @@ export default function Home() {
                     community outreach in order to promote cross-cultural
                     understanding and appreciation.
                 </Text>
-                <Button variant={"brand"}>
+                <Button
+                    variant={"brand"}
+                    onClick={() => {
+                        router.push("/what-we-offer");
+                    }}
+                >
                     <Text> Learn More </Text>
                 </Button>
             </Stack>

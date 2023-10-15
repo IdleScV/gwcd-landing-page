@@ -14,6 +14,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             isRequestingPerformance,
             performanceDate,
             message,
+            phone,
+            email,
         } = req.body;
 
         const emailContent = `
@@ -56,6 +58,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
                         <p><span class="label">Organization:</span> ${organization}</p>
                         <p><span class="label">Requesting Performance:</span> ${isRequestingPerformance}</p>
                         <p><span class="label">Performance Date:</span> ${performanceDate}</p>
+                        <p><span class="label">Phone:</span> ${phone}</p>
+                        <p><span class="label">Email:</span> ${email}</p>
                         <p><span class="label">Message:</span></p>
                         <p>${message}</p>
                     </div>

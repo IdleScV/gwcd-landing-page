@@ -20,6 +20,8 @@ interface FormData {
     isRequestingPerformance: string;
     performanceDate: string;
     message: string;
+    phone: string;
+    email: string;
 }
 
 export default function ContactForm() {
@@ -30,6 +32,8 @@ export default function ContactForm() {
         isRequestingPerformance: "No",
         performanceDate: "",
         message: "",
+        phone: "",
+        email: "",
     });
     const [isLoading, setIsLoading] = useState(false); // New state variable for loading status
 
@@ -111,6 +115,7 @@ export default function ContactForm() {
                 <FormControl id="name" marginBottom="4" isDisabled={isLoading}>
                     <FormLabel>Name</FormLabel>
                     <Input
+                        required
                         type="text"
                         placeholder="Name"
                         name="name"
@@ -126,10 +131,37 @@ export default function ContactForm() {
                 >
                     <FormLabel>Organization</FormLabel>
                     <Input
+                        required
                         type="text"
                         placeholder="Organization"
                         name="organization"
                         value={formData.organization}
+                        onChange={handleChange}
+                    />
+                </FormControl>
+
+                {/* ADD two fields for contact info, phone and email */}
+                <FormControl id="phone" marginBottom="4" isDisabled={isLoading}>
+                    {/* // ADD required ellipsis */}
+                    <FormLabel>Phone</FormLabel>
+                    <Input
+                        required
+                        type="text"
+                        placeholder="Phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                    />
+                </FormControl>
+
+                <FormControl id="email" marginBottom="4" isDisabled={isLoading}>
+                    <FormLabel>Email</FormLabel>
+                    <Input
+                        required
+                        type="text"
+                        placeholder="Email"
+                        name="email"
+                        value={formData.email}
                         onChange={handleChange}
                     />
                 </FormControl>
@@ -180,6 +212,7 @@ export default function ContactForm() {
                 <FormControl id="message" marginBottom="4">
                     <FormLabel>Message</FormLabel>
                     <Textarea
+                        required
                         placeholder="Type your message here"
                         name="message"
                         value={formData.message}

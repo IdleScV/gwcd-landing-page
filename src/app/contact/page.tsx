@@ -41,6 +41,7 @@ export default function ContactForm() {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        console.log("hitting here", formData);
 
         try {
             const response = await fetch("/api/contact", {

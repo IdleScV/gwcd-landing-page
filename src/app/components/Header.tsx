@@ -39,7 +39,7 @@ function Header() {
                     <Image
                         width="200px"
                         my={-3}
-                        src="./logo.png"
+                        src="https://gwcd-content.s3.amazonaws.com/GWCD+Dance/logo.png"
                         alt="Logo"
                         alignContent={"center"}
                         objectFit={"cover"}

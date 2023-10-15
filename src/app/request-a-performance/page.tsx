@@ -68,7 +68,9 @@ export default function RequestAPerformance() {
                     width="100%"
                     height={"500px"}
                     objectFit={"cover"}
-                    src={"./wwe-1.jpeg"}
+                    src={
+                        "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/wwe-1.jpeg"
+                    }
                     alt="wwe-1"
                 />
                 <Box width="100%" height="150px"></Box>
@@ -84,7 +86,9 @@ export default function RequestAPerformance() {
                         width="100%"
                         height={"500px"}
                         objectFit={"cover"}
-                        src={"./wwe-2.jpeg"}
+                        src={
+                            "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/wwe-2.jpeg"
+                        }
                         alt="wwe-2"
                     />
 
@@ -131,7 +135,9 @@ export default function RequestAPerformance() {
                             height={"500px"}
                             width={{ base: "100%", md: "calc(100% - 400px)" }}
                             objectFit={"cover"}
-                            src={"./wwe-3.jpeg"}
+                            src={
+                                "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/wwe-3.jpeg"
+                            }
                             alt="wwe-3"
                         />
 
@@ -184,7 +190,9 @@ export default function RequestAPerformance() {
                             height={"500px"}
                             width={{ base: "100%", md: "calc(100% - 400px)" }}
                             objectFit={"cover"}
-                            src={"./wwe-4.jpeg"}
+                            src={
+                                "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/wwe-4.jpeg"
+                            }
                             alt="wwe-4"
                         />
                     </Box>
@@ -199,7 +207,9 @@ export default function RequestAPerformance() {
                             height={"500px"}
                             width={{ base: "100%", md: "calc(100% - 400px)" }}
                             objectFit={"cover"}
-                            src={"./wwe-5.jpeg"}
+                            src={
+                                "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/wwe-5.jpeg"
+                            }
                             alt="wwe-5"
                         />
                         <Box

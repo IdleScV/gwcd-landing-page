@@ -4,16 +4,16 @@ const sections = [
     {
         id: "dunhuang",
         header: "Dunhuang",
-        bgImage: "./off-2.jpeg",
-        imgSrc: "./off-3.jpeg",
+        bgImage: "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/off-2.jpeg",
+        imgSrc: "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/off-3.jpeg",
         content:
             "Inspired by ancient Buddhist cave paintings of northwestern China, Dunhuang combines rhythmic techniques with classical Chinese dance to create a style that is invigorating, moving, and awe-inspiring.",
     },
     {
         id: "peking",
         header: "Peking Opera Inspired",
-        bgImage: "./off-4.jpeg",
-        imgSrc: "./off-1-5.jpg",
+        bgImage: "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/off-4.jpeg",
+        imgSrc: "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/off-1-5.jpg",
         imagePosition: "bottom",
         content:
             "This style honors the style and techniques of Beijing Opera, one of China’s most recognizable artistic treasures. These dances are typically playful and vibrant and often utilize martial arts and gymnastics skills.",
@@ -21,8 +21,8 @@ const sections = [
     {
         id: "hantang",
         header: "Han Tang",
-        bgImage: "./off-6.jpeg",
-        imgSrc: "./off-7.jpeg",
+        bgImage: "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/off-6.jpeg",
+        imgSrc: "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/off-7.jpeg",
         imagePosition: "50% 70%",
         content:
             "The Han Tang style comes from ancient Chinese court dances. Pieces from this style often depict real historical figures. Han Tang is typically graceful, elegant, and charming.",
@@ -30,8 +30,9 @@ const sections = [
     {
         id: "hanfolk",
         header: "Han Folk Dance",
-        bgImage: "./hanfolkbg.jpeg",
-        imgSrc: "./hanfolk.jpg",
+        bgImage:
+            "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/hanfolkbg.jpeg",
+        imgSrc: "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/hanfolk.jpg",
         imagePosition: "50% 25%",
         content:
             "The Han people are the largest ethnic group in China. Their folk dances often utilize fan and handkerchief props to aid in the storytelling of the piece.",
@@ -39,8 +40,9 @@ const sections = [
     {
         id: "daifolk",
         header: "Dai Folk Dance",
-        bgImage: "./daifolkbg.jpeg",
-        imgSrc: "./daifolk.jpeg",
+        bgImage:
+            "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/daifolkbg.jpeg",
+        imgSrc: "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/daifolk.jpeg",
         imagePosition: "50% 58%",
         content:
             "The Dai ethnic group is native to China’s Yunnan province and can also be found throughout much of Southeast Asia. Many audiences recognize Dai dance for its aesthetic similarity to classical Thai and Cambodian dance.",
@@ -48,8 +50,9 @@ const sections = [
     {
         id: "mongolian",
         header: "Inner Mongolian Folk Dance",
-        bgImage: "./mongolianbg.jpeg",
-        imgSrc: "./mongolian.jpeg",
+        bgImage:
+            "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/mongolianbg.jpeg",
+        imgSrc: "https://gwcd-content.s3.amazonaws.com/GWCD+Dance/mongolian.jpeg",
         imagePosition: "50% 40%",
         content:
             "China’s Inner Mongolian province lies directly between China and Mongolia and is heavily populated by ethnic Mongolian people. Dances from this region are highly spiritual with a joyful and powerful undercurrent.",
@@ -138,7 +141,7 @@ export default function WhatWeOffer() {
                     width="100%"
                     height="500px"
                     objectFit="cover"
-                    src="./off-1-5.jpg"
+                    src="https://gwcd-content.s3.amazonaws.com/GWCD+Dance/off-1-5.jpg"
                     alt="off-1"
                 />
                 <Box

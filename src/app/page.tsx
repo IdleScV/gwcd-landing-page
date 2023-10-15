@@ -30,20 +30,20 @@ export default function Home() {
                 }}
                 p={{ base: 4, md: 8 }}
             >
-                <VideoPlayer videoUrl="./landing.mp4" />
+                <VideoPlayer videoUrl="https://gwcd-content.s3.amazonaws.com/GWCD+Dance/landing.mp4" />
 
                 <Box
                     display={"flex"}
                     flexGrow={1}
                     flexDir={"column"}
-                    backgroundImage={"./landingside.jpg"}
+                    backgroundImage="url(https://gwcd-content.s3.amazonaws.com/GWCD+Dance/landingside.jpg)"
                     backgroundPosition={"35%"}
                     backgroundSize={"cover"}
                     p={4}
                     textAlign={"center"}
                 >
                     <Text fontSize="lg" color="brand.bodyFont">
-                        Updates
+                        s3://gwcd-content/GWCD Dance/ Updates
                     </Text>
                     <Text fontSize="small" color="brand.bodyFont">
                         Setup API connection here with a CMS
@@ -103,21 +103,21 @@ export default function Home() {
                         width="200px"
                         height="150px"
                         objectFit={"contain"}
-                        src={"./venues/Capital.png"}
+                        src="https://gwcd-content.s3.amazonaws.com/GWCD+Dance/venues/Capital.png"
                         alt="capital-one"
                     />
                     <Image
                         width="150px"
                         height="150px"
                         objectFit={"contain"}
-                        src={"./venues/Kennedy.png"}
+                        src="https://gwcd-content.s3.amazonaws.com/GWCD+Dance/venues/Kennedy.png"
                         alt="kennedy-center"
                     />
                     <Image
                         width="200px"
                         height="100px"
                         objectFit={"contain"}
-                        src={"./venues/Wolftrap.png"}
+                        src="https://gwcd-content.s3.amazonaws.com/GWCD+Dance/venues/Wolftrap.png"
                         alt="wolftrap"
                     />
                 </Stack>

@@ -72,13 +72,14 @@ const Section = ({
                 base: "column",
                 md: imageOnLeft ? "row-reverse" : "row",
             }}
-            height={{ md: "500px", lg: "600px" }}
+            height={{ md: "500px", base: "600px", lg: "700px" }}
             backgroundImage={bgImage}
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
         >
             <Image
-                height={{ md: "500px", lg: "600px" }}
+                height={"100%"}
+                maxHeight={{ base: "300px", md: "100%" }}
                 width={{ md: "calc(100% - 400px)" }}
                 objectFit="cover"
                 objectPosition={imagePosition || "center"}

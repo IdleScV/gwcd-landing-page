@@ -46,10 +46,7 @@ export default function Home() {
                     textAlign={"center"}
                 >
                     <Text fontSize="lg" color="brand.bodyFont">
-                        s3://gwcd-content/GWCD Dance/ Updates
-                    </Text>
-                    <Text fontSize="small" color="brand.bodyFont">
-                        Setup API connection here with a CMS
+                        Upcoming Events
                     </Text>
                 </Box>
             </Box>

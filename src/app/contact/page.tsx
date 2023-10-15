@@ -60,37 +60,40 @@ export default function ContactForm() {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    name: formData.name,
+                    organization: formData.organization,
+                    isRequestingPerformance: formData.isRequestingPerformance,
+                    performanceDate: formData.performanceDate,
+                    message: formData.message,
+                    phone: formData.phone,
+                    email: formData.email,
+                }),
             });
 
-            if (!response.ok)
+            if (!response.ok) {
                 throw new Error(
                     "Network response was not ok " + response.statusText
                 );
-
-            const data = await response.json();
-            console.log(data);
+            }
 
             toast({
-                // Show success popup
                 title: "Success",
-                description: "Your message has been sent!",
+                description: "Your message has been sent! We'll be in touch.",
                 status: "success",
                 duration: 5000,
                 isClosable: true,
             });
         } catch (error) {
-            console.error("Error submitting form:", error);
             toast({
-                // Optionally, show error popup
                 title: "Error",
-                description: "There was an error sending your message.",
+                description: "Failed to send the message. Please try again.",
                 status: "error",
                 duration: 5000,
                 isClosable: true,
             });
         } finally {
-            setIsLoading(false); // Set loading to false after submission
+            setIsLoading(false);
         }
     };
 

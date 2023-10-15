@@ -19,7 +19,7 @@ export default function RootLayout({
     useEffect(() => {
         setTimeout(() => {
             setShowAnimation(false);
-        }, 3400);
+        }, 3000);
     }, []);
 
     const options = {
@@ -41,20 +41,20 @@ export default function RootLayout({
                     <Box position="relative" backgroundColor="black">
                         <Fade
                             in={showAnimation}
-                            transition={{ exit: { duration: 1 } }}
+                            transition={{ exit: { duration: 0.5 } }}
                         >
                             <Box
-                                //  make these full screen
-                                height={"20vh"}
-                                width={"98vw"}
                                 backgroundColor={"brand.pageBackground"}
                                 position="absolute"
+                                width="100%"
+                                height="100dvh"
                                 zIndex={10}
+                                m={"auto"}
+                                display={"flex"}
+                                justifyContent={"center"}
+                                alignItems={"center"}
                             >
-                                <Flex
-                                    justifyContent={"center"}
-                                    alignItems={"center"}
-                                >
+                                <Flex height="500px" width={"500px"}>
                                     {View}
                                 </Flex>
                             </Box>
@@ -62,11 +62,12 @@ export default function RootLayout({
                         <Fade
                             in={!showAnimation}
                             transition={{
-                                enter: { duration: 0.7, delay: 0.1 },
+                                enter: { duration: 1, delay: 1 },
                             }}
                         >
                             <Header />
                             <Box
+                                display={showAnimation ? "none" : "block"}
                                 pt="80px"
                                 backgroundColor="brand.pageBackground"
                             >

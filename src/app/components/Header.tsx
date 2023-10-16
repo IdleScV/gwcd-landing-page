@@ -91,7 +91,7 @@ function Header() {
                             />
                         </PopoverTrigger>
                         <PopoverContent
-                            maxWidth="200px"
+                            maxWidth="300px"
                             mt={3.5}
                             mr={2}
                             display={{ md: "none" }}

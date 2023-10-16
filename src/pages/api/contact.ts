@@ -69,7 +69,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
         const data = {
             from: "GWDC Contact Page <mailgun@sandbox-123.mailgun.org>", // Replace with your sender email
-            to: "weschen1996@gmail.com, assistant.xjdance@gmail.com, xjdance@gmail.com", // Replace with your recipient email
+            to: "weschen1996@gmail.com, assistant.xjdance@gmail.com", // Replace with your recipient email
             subject: `Performance Request from ${name}`,
             text: "test",
             html: emailContent,

@@ -98,7 +98,7 @@ export default function ContactForm() {
     };
 
     return (
-        <>
+        <Box minHeight={"calc(100vh - 80px)"}>
             <Stack width="100%" spacing={0}>
                 <Image
                     maxWidth={"1020px"}
@@ -131,18 +131,8 @@ export default function ContactForm() {
             </Stack>
 
             <Box>
-                <Text
-                    p={8}
-                    fontSize="3xl"
-                    fontWeight={500}
-                    color="brand.bodyFont"
-                    textAlign={"center"}
-                >
-                    Performance Request/Contact Form
-                </Text>
                 <Box
                     maxWidth="400px"
-                    minHeight={"calc(100vh - 80px)"}
                     margin="auto"
                     padding="20px"
                     bg="brand.pageBackground"
@@ -283,6 +273,6 @@ export default function ContactForm() {
                     </Button>
                 </Box>
             </Box>
-        </>
+        </Box>
     );
 }

@@ -8,7 +8,7 @@ import { Box, Flex, Fade } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { useLottie } from "lottie-react";
 import LogoAnimation from "./lottie.json";
-
+import { Analytics } from "@vercel/analytics/react";
 export default function RootLayout({
     children,
 }: {
@@ -74,6 +74,7 @@ export default function RootLayout({
                                 {children}
                             </Box>
                         </Fade>
+                        <Analytics />
                     </Box>
                 </Providers>
             </body>

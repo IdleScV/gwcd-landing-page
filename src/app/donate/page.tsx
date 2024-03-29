@@ -102,7 +102,7 @@ export default function DonateForm() {
     };
 
     return (
-        <>
+        <Box minH="calc(100vh - 80px)">
             <Stack width="100%" spacing={0}>
                 <Image
                     maxWidth={"1020px"}
@@ -243,6 +243,6 @@ export default function DonateForm() {
                     </Button>
                 </Box>
             </Box>
-        </>
+        </Box>
     );
 }

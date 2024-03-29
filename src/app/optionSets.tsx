@@ -4,7 +4,7 @@ export enum Pages {
     RequestAPerformance = "Request a Performance",
     GWCDInTheNews = "GWCD in the News",
     Contact = "Contact",
-    // Donate = "Donate",
+    Donate = "Donate",
 }
 
 type Page = {

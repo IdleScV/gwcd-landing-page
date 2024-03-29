@@ -45,10 +45,10 @@ export const pages: Record<Pages, Page> = {
         content: "Contact",
         url: "/contact",
     },
-    // [Pages.Donate]: {
-    //     title: "Donate",
-    //     description: "Donate",
-    //     content: "Donate",
-    //     url: "/donate",
-    // },
+    [Pages.Donate]: {
+        title: "Donate",
+        description: "Donate",
+        content: "Donate",
+        url: "/donate",
+    },
 };
